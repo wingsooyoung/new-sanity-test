@@ -1,5 +1,6 @@
 {
   "name": "hello-sanity-vanilla-javascript-starter",
+  "type":"module",
   "version": "1.0.0",
   "description": "No dependencies, sending content query with fetch",
   "main": "index.html",
@@ -8,6 +9,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@sanity/client": "^6.4.12",
     "parcel-bundler": "^1.6.1"
   },
   "devDependencies": {
