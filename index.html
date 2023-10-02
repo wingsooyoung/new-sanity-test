@@ -13,7 +13,7 @@
     <main>
       <h2>Pets</h2>
       <ul>
-        <li id="l1">Loading pets…</li>
+        <li id="l1"><img src="/" id="l1img"></li>
         <li id="l2">Loading pets…</li>
         <li id="l3">Loading pets…</li>
         <li id="l4">Loading pets…</li>
@@ -39,9 +39,9 @@ Your data will show up here when you've configured everything correctly
       apiVersion: '2023-10-01', // use current date (YYYY-MM-DD) to target the latest API version
     })
   
-    const data = await client.fetch(`count(*)`)
+    // const data = await client.fetch(`count(*)`)
 
-    document.getElementById('results').innerText = `Number of documents: ${data}`
+    // document.getElementById('results').innerText = `Number of documents: ${data}`
 
  
 
@@ -62,15 +62,10 @@ Your data will show up here when you've configured everything correctly
         list.removeChild(firstListItem);
 
         res.forEach((postcard) => {
-            // create a list element for each pet
-            let listItem1 = document.createElement("li");
-            let listItem2 = document.createElement("li");
-            let listItem3 = document.createElement("li");
-            let listItem4 = document.createElement("li");
-            let listItem5 = document.createElement("li");
-
-            // add the pet name as the text content
+           // add the pet name as the text content
             // document.getElementById('l1').innerText  = postcard?.postcardDesign;
+            // document.getElementById("l1Img").src = postcard?.postcardDesign.postcardBase.image;
+
             document.getElementById('l2').innerText  = postcard?.letterTo;
             document.getElementById('l3').innerText  = postcard?.letterSigned;
             document.getElementById('l4').innerText  = postcard?.letterFrom;
